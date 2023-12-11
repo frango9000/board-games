@@ -83,7 +83,7 @@
     "@ngneat/elf-entities": "4.6.0",
     "@ngneat/elf-persist-state": "1.2.0",
     "@ngneat/subscribe": "4.0.0",
-    "@ngneat/transloco": "4.3.0",
+    "@ngneat/transloco": "6.0.4",
     "@ngneat/until-destroy": "10.0.0",
     "@ngx-formly/core": "6.2.2",
     "@ngx-formly/material": "6.2.2",
