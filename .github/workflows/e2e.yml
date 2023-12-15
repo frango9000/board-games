@@ -98,7 +98,7 @@ jobs:
 
       - name: Upload E2E Output
         if: failure() || inputs.save-video == 'true'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: e2e-output
           path: coverage/apps/app-e2e
