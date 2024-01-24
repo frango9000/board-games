@@ -31,7 +31,7 @@
     <node.version>v18.18.2</node.version><!-- See https://nodejs.org/en/download/ for latest node and yarn (lts) versions -->
     <npm.version>9.8.1</npm.version><!-- See https://nodejs.org/en/download/ for latest node and yarn (lts) versions -->
     <yarn.version>v1.22.19</yarn.version><!-- https://www.npmjs.com/package/yarn -->
-    <spring-cloud-contract.version>3.1.8</spring-cloud-contract.version>
+    <spring-cloud-contract.version>3.1.10</spring-cloud-contract.version>
   </properties>
 
   <dependencyManagement>
