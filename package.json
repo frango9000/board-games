@@ -124,7 +124,7 @@
     "@nxrocks/nx-spring-boot": "9.1.2",
     "@pact-foundation/pact": "12.1.1",
     "@schematics/angular": "17.0.5",
-    "@types/jest": "29.5.10",
+    "@types/jest": "29.5.12",
     "@types/jsonwebtoken": "9.0.5",
     "@types/node": "18.18.14",
     "@types/sockjs-client": "1.5.4",
