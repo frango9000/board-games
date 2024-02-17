@@ -19,6 +19,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Set;
 import java.util.stream.Stream;
+import lombok.NonNull;
 import lombok.SneakyThrows;
 import org.apache.commons.lang3.tuple.Pair;
 import org.junit.jupiter.api.BeforeAll;
@@ -113,7 +114,7 @@ class ApplicationForwardControllerIT {
   }
 
   private static String relativePath(Path base, Path resource) {
-    return new StringBuilder("/").append(base.relativize(resource).toString().replace('\\', '/')).toString();
+    return "/" + base.relativize(resource).toString().replace('\\', '/');
   }
 
   @TestConfiguration
@@ -121,13 +122,13 @@ class ApplicationForwardControllerIT {
 
     @Override
     @SneakyThrows
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+    public void addResourceHandlers(@NonNull ResourceHandlerRegistry registry) {
       walk(tempDir).filter(Files::isRegularFile).forEach(f -> addResourceHandler(registry, f, tempDir));
     }
 
     private void addResourceHandler(ResourceHandlerRegistry registry, Path resource, Path base) {
       String handler = relativePath(base, resource);
-      String location = new StringBuilder("file:///").append(base).append("/").toString();
+      String location = "file:///%s/".formatted(base);
       registry.addResourceHandler(handler).addResourceLocations(location);
     }
   }

@@ -26,8 +26,12 @@ spring:
   mail:
     host: localhost
     port: 3025
-    properties.mail.smtp.auth: false
-    properties.mail.smtp.starttls.enable: false
+    properties:
+      mail:
+        smtp:
+          auth: false
+          starttls:
+            enable: false
   devtools:
     livereload:
       enabled: true

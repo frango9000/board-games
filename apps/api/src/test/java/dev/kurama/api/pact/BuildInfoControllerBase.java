@@ -14,8 +14,4 @@ import org.springframework.test.context.TestPropertySource;
 @ImportMappers
 public class BuildInfoControllerBase extends PactBase {
 
-
-  @Override
-  protected void beforeEach() throws Exception {
-  }
 }

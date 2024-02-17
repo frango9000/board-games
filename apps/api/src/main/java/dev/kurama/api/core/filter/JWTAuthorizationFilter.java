@@ -30,8 +30,9 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
   private final JWTTokenProvider jwtTokenProvider;
 
   @Override
-  protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
-    throws ServletException, IOException {
+  protected void doFilterInternal(HttpServletRequest request,
+                                  @NonNull HttpServletResponse response,
+                                  @NonNull FilterChain filterChain) throws ServletException, IOException {
     if (request.getMethod().equalsIgnoreCase(OPTIONS.toString())) {
       response.setStatus(OK.value());
     } else {
